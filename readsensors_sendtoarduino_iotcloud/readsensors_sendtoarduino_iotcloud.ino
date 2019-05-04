@@ -84,7 +84,6 @@ void loop() {
   // then connect again and send data:
   if (millis() - lastConnectionTime > postingInterval) 
   {
-   
     readSensors();
     
     TEMPERATURE = _temperature;
@@ -147,7 +146,7 @@ void displayValuesOnTFT()
   
   testdrawtext(0,65,"P:", ST77XX_YELLOW,2);
   testdrawtext(25,65,pressure, ST77XX_YELLOW,2);
-  testdrawtext(110,70,"kPa", ST77XX_YELLOW,1);
+  testdrawtext(110,70,"hPa", ST77XX_YELLOW,1);
   
   testdrawtext(0,95,"L:", ST77XX_WHITE,2);
   testdrawtext(25,95,lux, ST77XX_WHITE,2);

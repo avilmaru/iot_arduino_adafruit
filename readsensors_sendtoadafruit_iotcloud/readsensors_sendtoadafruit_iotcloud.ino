@@ -52,7 +52,7 @@ WiFiClient client;
 void setup() {
  
   Serial.begin(9600);
-  //while (!Serial); // quitar si no no funcionara si no se conecta el monitor serie
+  //while (!Serial); // wait for serial port to connect. Needed for native USB port only
 
   // Init ST7735R chip, green tab
   tft.initR(INITR_144GREENTAB); 
@@ -275,7 +275,7 @@ void displayValuesOnTFT()
   
   testdrawtext(0,65,"P:", ST77XX_YELLOW,2);
   testdrawtext(25,65,pressure, ST77XX_YELLOW,2);
-  testdrawtext(110,70,"kPa", ST77XX_YELLOW,1);
+  testdrawtext(110,70,"hPa", ST77XX_YELLOW,1);
   
   testdrawtext(0,95,"L:", ST77XX_WHITE,2);
   testdrawtext(25,95,lux, ST77XX_WHITE,2);
@@ -298,7 +298,7 @@ void displayValuesOnSerial()
 
   Serial.print("Pressure    = ");
   Serial.print(_pressure);
-  Serial.println(" kPa");
+  Serial.println(" hPa");
 
   Serial.print("Lux     = ");
   Serial.println(_lux);
