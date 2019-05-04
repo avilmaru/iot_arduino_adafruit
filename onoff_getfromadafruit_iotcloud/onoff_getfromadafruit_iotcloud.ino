@@ -37,8 +37,8 @@ int state = 2;
 void setup() {
 
   Serial.begin(9600);
-  //while (!Serial); // quitar si no no funcionara si no se conecta el monitor serie
-
+  //while (!Serial);   // wait for serial port to connect. Needed for native USB port only
+  
   // initialize the display
   MATRIX.begin();
 
