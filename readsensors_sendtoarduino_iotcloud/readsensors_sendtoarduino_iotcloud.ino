@@ -84,7 +84,7 @@ void loop() {
   // then connect again and send data:
   if (millis() - lastConnectionTime > postingInterval) 
   {
-    // Your code here 
+   
     readSensors();
     
     TEMPERATURE = _temperature;
